@@ -1,0 +1,8 @@
+{
+ "collected_at": "2026-11-04T01:22:09+00:00",
+ "image": "scm-target:baseline",
+ "hardening_index": 56,
+ "warnings": 5,
+ "suggestions": 40,
+ "lynis_version": "3.0.8"
+}

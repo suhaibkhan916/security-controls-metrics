@@ -1,0 +1,14 @@
+{
+ "collected_at": "2026-11-04T01:23:25+00:00",
+ "image": "scm-target:hardened",
+ "by_severity": {
+  "CRITICAL": 4,
+  "HIGH": 52,
+  "MEDIUM": 148,
+  "LOW": 149,
+  "UNKNOWN": 4
+ },
+ "total": 357,
+ "fixable": 0,
+ "scanner": "aquasec/trivy:0.57.1"
+}

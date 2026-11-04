@@ -1,0 +1,126 @@
+{
+ "collected_at": "2026-11-04T01:22:09+00:00",
+ "image": "scm-target:baseline",
+ "controls": [
+  {
+   "id": "CTL-01",
+   "name": "SSH does not allow root login",
+   "severity": "high",
+   "ce": "Secure configuration",
+   "cis": "4.7 Manage default accounts",
+   "nist": "PR.AA",
+   "iso": "8.2 Privileged access rights",
+   "passed": false
+  },
+  {
+   "id": "CTL-02",
+   "name": "SSH password authentication disabled (keys only)",
+   "severity": "high",
+   "ce": "Secure configuration",
+   "cis": "4.1 Secure configuration process",
+   "nist": "PR.AA",
+   "iso": "8.5 Secure authentication",
+   "passed": false
+  },
+  {
+   "id": "CTL-03",
+   "name": "No account has an empty password",
+   "severity": "high",
+   "ce": "User access control",
+   "cis": "5.2 Use unique passwords",
+   "nist": "PR.AA",
+   "iso": "5.17 Authentication information",
+   "passed": false
+  },
+  {
+   "id": "CTL-04",
+   "name": "Only root has UID 0",
+   "severity": "high",
+   "ce": "User access control",
+   "cis": "5.4 Restrict administrator privileges",
+   "nist": "PR.AA",
+   "iso": "8.2 Privileged access rights",
+   "passed": false
+  },
+  {
+   "id": "CTL-05",
+   "name": "/etc/shadow is not readable by other users",
+   "severity": "high",
+   "ce": "Secure configuration",
+   "cis": "3.3 Configure data access control lists",
+   "nist": "PR.DS",
+   "iso": "8.3 Information access restriction",
+   "passed": false
+  },
+  {
+   "id": "CTL-06",
+   "name": "No world-writable files in application and system directories",
+   "severity": "medium",
+   "ce": "Secure configuration",
+   "cis": "3.3 Configure data access control lists",
+   "nist": "PR.DS",
+   "iso": "8.3 Information access restriction",
+   "passed": false
+  },
+  {
+   "id": "CTL-07",
+   "name": "sudo group has no members outside the approved admin list",
+   "severity": "medium",
+   "ce": "User access control",
+   "cis": "5.4 Restrict administrator privileges",
+   "nist": "PR.AA",
+   "iso": "5.18 Access rights",
+   "passed": false
+  },
+  {
+   "id": "CTL-08",
+   "name": "Password maximum age is 365 days or less",
+   "severity": "low",
+   "ce": "User access control",
+   "cis": "5.2 Use unique passwords",
+   "nist": "PR.AA",
+   "iso": "5.17 Authentication information",
+   "passed": false
+  },
+  {
+   "id": "CTL-09",
+   "name": "Legacy cleartext service (telnet server) not installed",
+   "severity": "medium",
+   "ce": "Secure configuration",
+   "cis": "4.8 Uninstall or disable unnecessary services",
+   "nist": "PR.PS",
+   "iso": "8.9 Configuration management",
+   "passed": false
+  },
+  {
+   "id": "CTL-10",
+   "name": "No outstanding package updates (patch management)",
+   "severity": "high",
+   "ce": "Security update management",
+   "cis": "7.3 Automated operating system patch management",
+   "nist": "PR.PS",
+   "iso": "8.8 Management of technical vulnerabilities",
+   "passed": false
+  },
+  {
+   "id": "CTL-11",
+   "name": "Host firewall ruleset defaults to deny inbound",
+   "severity": "medium",
+   "ce": "Firewalls",
+   "cis": "4.4 Implement and manage a firewall on servers",
+   "nist": "PR.IR",
+   "iso": "8.20 Networks security",
+   "passed": false
+  },
+  {
+   "id": "CTL-12",
+   "name": "Audit logging records changes to account files",
+   "severity": "medium",
+   "ce": "Secure configuration",
+   "cis": "8.2 Collect audit logs",
+   "nist": "DE.CM",
+   "iso": "8.15 Logging",
+   "passed": false
+  }
+ ]
+}

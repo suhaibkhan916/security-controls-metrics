@@ -1,0 +1,144 @@
+{
+ "as_of": "2026-10-31",
+ "states": {
+  "baseline": {
+   "collected_at": "2026-11-04T01:22:09+00:00",
+   "controls": {
+    "passed": 0,
+    "total": 12,
+    "pass_rate": 0.0,
+    "weighted_pass_rate": 0.0,
+    "high_severity_failures": [
+     "CTL-01",
+     "CTL-02",
+     "CTL-03",
+     "CTL-04",
+     "CTL-05",
+     "CTL-10"
+    ],
+    "by_ce_theme": {
+     "Firewalls": {
+      "passed": 0,
+      "total": 1
+     },
+     "Secure configuration": {
+      "passed": 0,
+      "total": 6
+     },
+     "Security update management": {
+      "passed": 0,
+      "total": 1
+     },
+     "User access control": {
+      "passed": 0,
+      "total": 4
+     }
+    }
+   },
+   "lynis": {
+    "hardening_index": 56,
+    "warnings": 5,
+    "suggestions": 40
+   },
+   "vulnerabilities": {
+    "total": 478,
+    "by_severity": {
+     "CRITICAL": 6,
+     "HIGH": 82,
+     "MEDIUM": 203,
+     "LOW": 176,
+     "UNKNOWN": 11
+    },
+    "fixable_outstanding": 120,
+    "no_fix_available": 358,
+    "critical_and_high": 88
+   }
+  },
+  "hardened": {
+   "collected_at": "2026-11-04T01:23:25+00:00",
+   "controls": {
+    "passed": 12,
+    "total": 12,
+    "pass_rate": 100.0,
+    "weighted_pass_rate": 100.0,
+    "high_severity_failures": [],
+    "by_ce_theme": {
+     "Firewalls": {
+      "passed": 1,
+      "total": 1
+     },
+     "Secure configuration": {
+      "passed": 6,
+      "total": 6
+     },
+     "Security update management": {
+      "passed": 1,
+      "total": 1
+     },
+     "User access control": {
+      "passed": 4,
+      "total": 4
+     }
+    }
+   },
+   "lynis": {
+    "hardening_index": 57,
+    "warnings": 1,
+    "suggestions": 39
+   },
+   "vulnerabilities": {
+    "total": 357,
+    "by_severity": {
+     "CRITICAL": 4,
+     "HIGH": 52,
+     "MEDIUM": 148,
+     "LOW": 149,
+     "UNKNOWN": 4
+    },
+    "fixable_outstanding": 0,
+    "no_fix_available": 357,
+    "critical_and_high": 56,
+    "fixable_remediated_pct": 100.0
+   }
+  }
+ },
+ "remediation": {
+  "critical": {
+   "tickets": 4,
+   "closed": 4,
+   "open": 0,
+   "sla_days": 14,
+   "mean_days_to_fix": 13.0,
+   "sla_compliance_pct": 50.0,
+   "open_overdue": 0
+  },
+  "high": {
+   "tickets": 12,
+   "closed": 6,
+   "open": 6,
+   "sla_days": 14,
+   "mean_days_to_fix": 18.3,
+   "sla_compliance_pct": 37.5,
+   "open_overdue": 2
+  },
+  "medium": {
+   "tickets": 18,
+   "closed": 8,
+   "open": 10,
+   "sla_days": 30,
+   "mean_days_to_fix": 21.2,
+   "sla_compliance_pct": 54.5,
+   "open_overdue": 3
+  },
+  "low": {
+   "tickets": 10,
+   "closed": 1,
+   "open": 9,
+   "sla_days": 90,
+   "mean_days_to_fix": 50.0,
+   "sla_compliance_pct": 100.0,
+   "open_overdue": 0
+  }
+ },
+ "remediation_data": "SYNTHETIC (data/generate_tracker.py, seed 2026)"
+}
