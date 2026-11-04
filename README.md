@@ -57,6 +57,7 @@ That builds both images, runs the checks, Lynis and Trivy, then writes `results/
 - The Cyber Essentials malware protection theme is not measured.
 - Remediation tickets and the supplier are synthetic or fictional and illustrate the method, not a real organisation.
 - Trivy scans OS packages only; vulnerability counts change as the database updates, so reruns will differ slightly.
+- Some Lynis tests read the host kernel through the container, so the hardening index depends a little on the machine: CI on GitHub's Ubuntu runners scored 55 and 56 against 56 and 57 on Docker Desktop. Control results and vulnerability counts matched exactly.
 
 See [docs/DESIGN_NOTES.md](docs/DESIGN_NOTES.md) for the reasoning behind each choice.
 
