@@ -1,0 +1,67 @@
+# Supplier security questions. weight: importance (1 to 3). must_have: a "no" blocks approval
+# until it is fixed or formally risk-accepted. Mapped to ISO/IEC 27001:2022 Annex A supplier controls,
+# UK GDPR Article 28 (processor obligations) and Cyber Essentials.
+
+- id: Q01
+  area: Certification and assurance
+  text: Does the supplier hold a current ISO/IEC 27001 certificate covering this service, or Cyber Essentials Plus?
+  weight: 2
+  maps: ["ISO 5.19", "ISO 5.21"]
+
+- id: Q02
+  area: Data protection
+  text: Will the supplier sign a data processing agreement meeting UK GDPR Article 28?
+  weight: 3
+  must_have: true
+  maps: ["UK GDPR Art 28", "ISO 5.20"]
+
+- id: Q03
+  area: Data protection
+  text: Is personal data stored and processed in the UK or EEA, or under a valid transfer mechanism?
+  weight: 3
+  must_have: true
+  maps: ["UK GDPR Art 44-46", "ISO 5.23"]
+
+- id: Q04
+  area: Identity and access
+  text: Does the service support single sign-on (SAML or OIDC) and enforce MFA for supplier administrators?
+  weight: 3
+  must_have: true
+  maps: ["ISO 5.17", "ISO 8.5"]
+
+- id: Q05
+  area: Encryption
+  text: Is data encrypted in transit (TLS 1.2 or later) and at rest?
+  weight: 2
+  maps: ["ISO 8.24"]
+
+- id: Q06
+  area: Vulnerability management
+  text: Does the supplier commission an independent penetration test at least yearly and share the summary?
+  weight: 2
+  maps: ["ISO 8.8", "ISO 5.22"]
+
+- id: Q07
+  area: Incident management
+  text: Will the supplier notify the organisation of a personal data breach without undue delay, and in under 24 hours?
+  weight: 3
+  must_have: true
+  maps: ["UK GDPR Art 33(2)", "ISO 5.20", "ISO 5.24"]
+
+- id: Q08
+  area: Supply chain
+  text: Does the supplier list its sub-processors and give notice before adding new ones?
+  weight: 2
+  maps: ["UK GDPR Art 28(2)", "ISO 5.21"]
+
+- id: Q09
+  area: Resilience
+  text: Are backups tested and is there a documented recovery time objective for the service?
+  weight: 1
+  maps: ["ISO 8.13", "ISO 5.30"]
+
+- id: Q10
+  area: Exit
+  text: Can all of the organisation's data be exported in a standard format and deleted on exit, with written confirmation?
+  weight: 2
+  maps: ["ISO 5.20", "ISO 8.10"]

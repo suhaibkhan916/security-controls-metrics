@@ -1,0 +1,26 @@
+# FICTIONAL supplier for the worked example. Not a real company or product.
+supplier: ExampleFeedback Ltd (fictional)
+service: Online feedback surveys for customers and staff
+data: Customer names, work email, customer ID, free-text feedback (may include special category data)
+users: About 20,000 customers and 3,000 staff
+
+answers:
+  Q01: {answer: "partial", evidence: "Cyber Essentials (basic), ISO 27001 certification planned for next year"}
+  Q02: {answer: "yes", evidence: "Template DPA provided, Article 28 clauses present"}
+  Q03: {answer: "yes", evidence: "Hosted in a UK cloud region; support staff access from the UK only"}
+  Q04: {answer: "partial", evidence: "SAML SSO supported; MFA optional for supplier admin accounts"}
+  Q05: {answer: "yes", evidence: "TLS 1.2+, AES-256 at rest (provider managed keys)"}
+  Q06: {answer: "yes", evidence: "Annual test by a CREST member; summary provided (see pentest below)"}
+  Q07: {answer: "partial", evidence: "Contract says 'within 72 hours'"}
+  Q08: {answer: "yes", evidence: "Sub-processor list published; 30 days' notice of changes"}
+  Q09: {answer: "no", evidence: "Backups taken daily; restore not tested, no stated RTO"}
+  Q10: {answer: "yes", evidence: "CSV export; deletion within 30 days with certificate"}
+
+# Summary of the supplier's latest penetration test (fictional).
+pentest:
+  date: 2026-06-15
+  findings:
+    - {id: PT-1, title: "Stored cross-site scripting in survey comments", severity: high, status: open}
+    - {id: PT-2, title: "Session cookie missing SameSite attribute", severity: medium, status: fixed}
+    - {id: PT-3, title: "Verbose error messages reveal framework version", severity: low, status: open}
+    - {id: PT-4, title: "No account lockout on supplier admin login", severity: high, status: fixed}
