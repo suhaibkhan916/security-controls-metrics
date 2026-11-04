@@ -1,0 +1,45 @@
+ticket,severity,source,owner,opened,closed
+VUL-001,critical,Vulnerability scan,Web Services,2026-09-08,2026-09-20
+VUL-002,critical,Supplier advisory,Customer Systems,2026-10-09,2026-10-28
+VUL-003,critical,Supplier advisory,Web Services,2026-10-06,2026-10-23
+VUL-004,critical,Vulnerability scan,Identity,2026-09-01,2026-09-05
+VUL-005,high,Supplier advisory,Infrastructure,2026-10-23,
+VUL-006,high,MDR alert,Web Services,2026-10-23,
+VUL-007,high,MDR alert,Identity,2026-09-26,2026-10-15
+VUL-008,high,Vulnerability scan,Identity,2026-10-22,
+VUL-009,high,MDR alert,Identity,2026-09-06,2026-10-14
+VUL-010,high,MDR alert,Infrastructure,2026-09-30,2026-10-12
+VUL-011,high,MDR alert,Data Platform,2026-10-25,
+VUL-012,high,Supplier advisory,Customer Systems,2026-09-28,2026-10-06
+VUL-013,high,Vulnerability scan,Data Platform,2026-10-06,
+VUL-014,high,Supplier advisory,Customer Systems,2026-10-03,
+VUL-015,high,Supplier advisory,Customer Systems,2026-09-17,2026-10-16
+VUL-016,high,Penetration test,Web Services,2026-10-04,2026-10-08
+VUL-017,medium,Vulnerability scan,Customer Systems,2026-10-23,
+VUL-018,medium,Penetration test,Data Platform,2026-09-28,
+VUL-019,medium,Supplier advisory,Data Platform,2026-09-15,2026-10-07
+VUL-020,medium,Supplier advisory,Identity,2026-10-16,
+VUL-021,medium,Supplier advisory,Data Platform,2026-10-06,
+VUL-022,medium,MDR alert,Identity,2026-09-28,2026-10-30
+VUL-023,medium,Penetration test,Customer Systems,2026-09-01,2026-09-12
+VUL-024,medium,Supplier advisory,Identity,2026-09-30,
+VUL-025,medium,Supplier advisory,Data Platform,2026-09-13,2026-10-23
+VUL-026,medium,Supplier advisory,Customer Systems,2026-10-03,
+VUL-027,medium,MDR alert,Identity,2026-10-13,2026-10-24
+VUL-028,medium,Supplier advisory,Customer Systems,2026-09-30,2026-10-19
+VUL-029,medium,Penetration test,Data Platform,2026-09-17,
+VUL-030,medium,Vulnerability scan,Identity,2026-10-24,
+VUL-031,medium,Vulnerability scan,Web Services,2026-10-02,
+VUL-032,medium,Penetration test,Data Platform,2026-10-18,
+VUL-033,medium,Vulnerability scan,Data Platform,2026-09-01,2026-09-19
+VUL-034,medium,Penetration test,Web Services,2026-10-08,2026-10-25
+VUL-035,low,Vulnerability scan,Customer Systems,2026-09-08,
+VUL-036,low,MDR alert,Web Services,2026-09-18,
+VUL-037,low,Supplier advisory,Web Services,2026-09-01,2026-10-21
+VUL-038,low,Supplier advisory,Customer Systems,2026-10-05,
+VUL-039,low,MDR alert,Infrastructure,2026-09-09,
+VUL-040,low,Penetration test,Web Services,2026-09-27,
+VUL-041,low,MDR alert,Customer Systems,2026-10-21,
+VUL-042,low,Penetration test,Customer Systems,2026-09-27,
+VUL-043,low,Supplier advisory,Infrastructure,2026-10-22,
+VUL-044,low,Vulnerability scan,Infrastructure,2026-09-07,
