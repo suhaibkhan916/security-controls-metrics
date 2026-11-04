@@ -1,0 +1,117 @@
+# Each control is a shell check run inside the target with `sh -c`. Exit 0 = pass.
+# Mappings use published identifiers:
+#   ce:   Cyber Essentials technical control themes
+#   cis:  CIS Controls v8 safeguards
+#   nist: NIST CSF 2.0 categories
+#   iso:  ISO/IEC 27001:2022 Annex A controls
+# severity weights the control pass score (high=3, medium=2, low=1).
+
+- id: CTL-01
+  name: SSH does not allow root login
+  severity: high
+  check: "grep -Eiq '^PermitRootLogin[[:space:]]+no' /etc/ssh/sshd_config"
+  ce: Secure configuration
+  cis: "4.7 Manage default accounts"
+  nist: PR.AA
+  iso: "8.2 Privileged access rights"
+
+- id: CTL-02
+  name: SSH password authentication disabled (keys only)
+  severity: high
+  check: "grep -Eiq '^PasswordAuthentication[[:space:]]+no' /etc/ssh/sshd_config"
+  ce: Secure configuration
+  cis: "4.1 Secure configuration process"
+  nist: PR.AA
+  iso: "8.5 Secure authentication"
+
+- id: CTL-03
+  name: No account has an empty password
+  severity: high
+  check: "test -z \"$(awk -F: '($2==\"\"){print $1}' /etc/shadow)\""
+  ce: User access control
+  cis: "5.2 Use unique passwords"
+  nist: PR.AA
+  iso: "5.17 Authentication information"
+
+- id: CTL-04
+  name: Only root has UID 0
+  severity: high
+  check: "test \"$(awk -F: '($3==0){print $1}' /etc/passwd)\" = root"
+  ce: User access control
+  cis: "5.4 Restrict administrator privileges"
+  nist: PR.AA
+  iso: "8.2 Privileged access rights"
+
+- id: CTL-05
+  name: /etc/shadow is not readable by other users
+  severity: high
+  check: "test $(( $(stat -c %a /etc/shadow) % 10 )) -eq 0"
+  ce: Secure configuration
+  cis: "3.3 Configure data access control lists"
+  nist: PR.DS
+  iso: "8.3 Information access restriction"
+
+- id: CTL-06
+  name: No world-writable files in application and system directories
+  severity: medium
+  check: "test -z \"$(find /etc /opt /usr/local -xdev -type f -perm -0002 2>/dev/null)\""
+  ce: Secure configuration
+  cis: "3.3 Configure data access control lists"
+  nist: PR.DS
+  iso: "8.3 Information access restriction"
+
+- id: CTL-07
+  name: sudo group has no members outside the approved admin list
+  severity: medium
+  check: "test -z \"$(getent group sudo | cut -d: -f4)\""
+  ce: User access control
+  cis: "5.4 Restrict administrator privileges"
+  nist: PR.AA
+  iso: "5.18 Access rights"
+
+- id: CTL-08
+  name: Password maximum age is 365 days or less
+  severity: low
+  check: "test $(awk '/^PASS_MAX_DAYS/{print $2}' /etc/login.defs) -le 365"
+  ce: User access control
+  cis: "5.2 Use unique passwords"
+  nist: PR.AA
+  iso: "5.17 Authentication information"
+
+- id: CTL-09
+  name: Legacy cleartext service (telnet server) not installed
+  severity: medium
+  check: "! dpkg -s inetutils-telnetd >/dev/null 2>&1"
+  ce: Secure configuration
+  cis: "4.8 Uninstall or disable unnecessary services"
+  nist: PR.PS
+  iso: "8.9 Configuration management"
+
+- id: CTL-10
+  name: No outstanding package updates (patch management)
+  severity: high
+  # Needs package lists: the runner refreshes them first. Counts upgradable packages.
+  check: "test $(apt-get -s upgrade 2>/dev/null | grep -c '^Inst ') -eq 0"
+  needs_apt_update: true
+  ce: Security update management
+  cis: "7.3 Automated operating system patch management"
+  nist: PR.PS
+  iso: "8.8 Management of technical vulnerabilities"
+
+- id: CTL-11
+  name: Host firewall ruleset defaults to deny inbound
+  severity: medium
+  check: "grep -q 'policy drop' /etc/nftables.conf 2>/dev/null"
+  ce: Firewalls
+  cis: "4.4 Implement and manage a firewall on servers"
+  nist: PR.IR
+  iso: "8.20 Networks security"
+
+- id: CTL-12
+  name: Audit logging records changes to account files
+  severity: medium
+  check: "grep -rqs 'identity' /etc/audit/rules.d/"
+  ce: Secure configuration
+  cis: "8.2 Collect audit logs"
+  nist: DE.CM
+  iso: "8.15 Logging"
